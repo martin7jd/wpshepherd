@@ -89,7 +89,7 @@ $( "#tabs" ).tabs();
         </div>                                 
       </div>
       <div id="tabs-2">
-        <div id="left-box">
+        <div class="menu_div" id="left-box">
           <ul>
             <li>
               <a href="#" id="inst" onclick="page(this.id)">New Set-up<div id="i"></div></a><!--index_inst.php-->              
@@ -109,7 +109,7 @@ $( "#tabs" ).tabs();
         </div>
      </div>
       <div id="tabs-3">
-        <div id="left-box">
+        <div class="menu_div"  id="left-box">
           <ul>
            <li>
               <a href="#" id="admin_set" onclick="page(this.id)">Installation Settings<div id="a_s"></div></a><!--index_admin_set.php-->              
@@ -129,7 +129,7 @@ $( "#tabs" ).tabs();
         </div>                         
       </div>
       <div id="tabs-4">
-        <div id="left-box">
+        <div class="menu_div"  id="left-box">
         </div>
         <div id="content_4">
         <p>How to get in touch for requests, bugs and comments</p>        
@@ -148,7 +148,7 @@ $( "#tabs" ).tabs();
         </div>                 
       </div> 
       <div id="tabs-6">
-        <div id="left-box">
+        <div class="menu_div"  id="left-box">
           <ul>
            <li>
               <a href="#" id="git_down" onclick="page(this.id)">Download Git<div id="g_d"></div></a><!--index_admin_set.php-->              
@@ -164,7 +164,7 @@ $( "#tabs" ).tabs();
         </div>                                                 
       </div>            
       <div id="tabs-7">
-        <div id="left-box">
+        <div class="menu_div"  id="left-box">
         <div id="content_7">
         <p>All about the BNCoders</p>
         <p>Formed in 2013</p>        
