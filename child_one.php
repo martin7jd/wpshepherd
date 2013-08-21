@@ -54,9 +54,14 @@
     $stringData = "\t\t@import url(\"../$theme/style.css\");";
     fwrite($fh, $stringData);
     
-    fclose($fh);      
+    fclose($fh); 
+    
+    echo '<div id="sitename">'; 
+    	
+    	echo '<h3>Congratulations</h3>';             
+    	echo 'Child theme directory and style.css created<br/>';
+    	echo '<h3>Activate the child theme</h3>';
+    	echo 'Log in to your site\'s dashboard, and go to Administration Panels > Appearance > Themes. You will see your child theme listed there. Click Activate.';
 
-    echo 'Child theme directory and sytle.css created<br/>';
-    echo 'Activate the child theme. Log in to your site\'s dashboard, and go to Administration Panels > Appearance > Themes. You will see your child theme listed there. Click Activate.';
-
+	echo '</div>';
 ?>

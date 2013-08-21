@@ -12,11 +12,15 @@
     See LICENSE.TXT for details.
 
     Revision:     None
+  
   */  
 
   if(file_exists('rem_two.php')){
 
-  echo 'Remove Website:<br/><br/>';
+   	echo '<div id="sitename">';
+
+
+  	echo '<h3>Delete Website</h3>';
   
   # List all the wordpress_****** in the directory
     $d = dir('../');
@@ -34,18 +38,34 @@
             # match found index by one
               $count++;
         
-        }
-      
+        }      
       }
     }  
 
+	echo '</div>';
+
     if($count <= 0){
+    
+    echo '<div id="sitename">';     
+    
+		echo '<h3>Confirmation</h3>';
+    
       echo 'No Instances of Wordpress Found';        
+    
+    echo '</div>';         	
+    
+    
     }
 
- }else{
+ }	else	{
+
+    echo '<div id="sitename">';     
+
+		echo '<h3>Warning</h3>';
  
-    echo 'You need to click on the Admin tab and select Installation Settings';
+    	echo 'You need to click on the Admin tab and select Installation Settings';
+    	
+    echo '</div>';         	
  
  }
 ?>

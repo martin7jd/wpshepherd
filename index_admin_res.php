@@ -40,9 +40,16 @@
         if(! $retval ){
               /*die('No Table Found ');*/              
         }
+          
+    	  echo '<div id="sitename">';     
+
+		  echo '<h3>Warning</h3>';
+          
           echo 'Table deleted successfully<br/>';            
         
-          echo 'Reset is done';      
+          echo 'Reset is done'; 
+          
+          echo '</div>';     
       
         if(file_exists('./common/con_localhost.php')){
             echo './common/con_localhost.php Found';
@@ -58,8 +65,13 @@
     mysqli_close($link);
   
   }else {
+
+    echo '<div id="sitename">';     
+
+	echo '<h3>Warning</h3>';
   
   	echo 'You need to click on the Admin tab and select Installation Settings';
-  
+	
+  echo '</div>';
   }        
 ?>

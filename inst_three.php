@@ -29,7 +29,7 @@
   require_once('./common/con_localhost.php');  
 
 	$link = local_db_connect();
-    
+		    
   # Get host info so that it can be writen to the install.phppage that is created below
     $getValues = 'SELECT * FROM wpadmin_localhost.localhost_info WHERE admin_host = "localhost"';
         
@@ -96,15 +96,15 @@ function progressCallback( $download_size, $downloaded_size, $upload_size, $uplo
            $previousProgress = $progress;
            $fp = fopen( 'progress.txt', 'r+b' );
 
-			  # Div required for the dynamic loading of the download count
+		# Div required for the dynamic loading of the download count
           echo '<div id="load"></div>';
-          		   
+                    		   
         # This is for the jquery
           echo '<input id="projNum" value="0" type="hidden"/>';           
            $to_file = "Downloaded: $progress%";
            
            if($progress == '100'){
-                $to_file = 'Downloaded the latest version Wordpress &#10004;<br/>';           
+                $to_file = 'Downloaded the latest version of Wordpress <font color="green">&#10004;</font><br/>';           
            }            
             fputs( $fp, $to_file );
             fclose( $fp );
@@ -126,7 +126,7 @@ function progressCallback( $download_size, $downloaded_size, $upload_size, $uplo
         $zip->extractTo('./downloads');        
         $zip->close();        
 
-        $to_file = 'Wordpress Unzip Complete &#10004;<br/>';
+        $to_file = 'Wordpress Unzip Complete <font color="green">&#10004;</font><br/>';
         fputs( $fp, $to_file );          
       } else {
         $to_file = 'Unzip Failed<br/>';
@@ -147,7 +147,7 @@ function progressCallback( $download_size, $downloaded_size, $upload_size, $uplo
     $sql = 'CREATE DATABASE wordpress_' . $web;
     if (mysqli_query($link,$sql)){
         
-        $to_file = 'Database wordpress_' . $web . ' created &#10004;<br/>';
+        $to_file = 'Database wordpress_' . $web . ' created <font color="green">&#10004;</font><br/>';
         fputs( $fp, $to_file );            
         
     }else  {
@@ -164,7 +164,7 @@ function progressCallback( $download_size, $downloaded_size, $upload_size, $uplo
         fputs( $fp, $to_file );                
     
     }else{
-        $to_file = 'Copying install.php to wordpress_' . $web . ' directory &#10004;<br/>';
+        $to_file = 'Copying install.php to wordpress_' . $web . ' directory <font color="green">&#10004;</font><br/>';
         fputs( $fp, $to_file );            
     }
   
@@ -283,7 +283,7 @@ function progressCallback( $download_size, $downloaded_size, $upload_size, $uplo
     fwrite($fh, $stringData);
     fclose($fh);
 
-    $to_file = 'Creating the wp-config.php &#10004;<br/>';
+    $to_file = 'Creating the wp-config.php <font color="green">&#10004;</font><br/>';
     fputs( $fp, $to_file );                
 
     $to_file = 'WP Shepherd set-up complete. <br/>Now let\'s complete the Wordpress "Famous 5 minute installation"<br/>';
@@ -291,7 +291,7 @@ function progressCallback( $download_size, $downloaded_size, $upload_size, $uplo
     sleep(4);
     
     fclose( $fp );/* Closes the process that writes to the screen*/
-    
+        
 
     mysqli_close($link);
 

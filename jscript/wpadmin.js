@@ -4,11 +4,10 @@
     $("ul.tabs").tabs("div.panes > div");
   });
 
-
   function page(selId){
 
         $(document).ready(function(){
-    /*  Install a fresh copy of Wordpress*/
+    /*  Install a fresh copy of Wordpress */
         if(selId == 'inst'){
         $('#i').html('<img src="images/arrows16.gif"/>');        
 			  
@@ -322,7 +321,8 @@
 		    });
     }
 
-/*  Resets a div in a page*/
+/*  Resets a div in a page	*/
     function resetDiv(){
       $("#content_2").html("");      
     }
+    

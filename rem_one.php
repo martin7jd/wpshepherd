@@ -14,17 +14,16 @@
     Revision:     None
   */  
 
+   $delWeb = $_POST['web'];
+   
+   echo '<div id="sitename">';
+         
+   echo '<h3>Warning</h3>';
+           
+   echo 'You are about to delete the website "' . substr($delWeb,10) . '"';
 
-  $delWeb = $_POST['web'];
-  
-   echo 'You are about to delete the website ' . substr($delWeb,10);
+   echo '<br/><br/><button type="button" onclick="rem_confirm(\'' . $delWeb . '\')">Continue?</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="rem_deny()">Cancel!</button>';
 
-   echo '<br/><button type="button" onclick="rem_confirm(\'' . $delWeb . '\')">Continue?</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="rem_deny()">Cancel!</button>';
-
-
-
-
-
-
+   echo '</div>';
 
 ?>

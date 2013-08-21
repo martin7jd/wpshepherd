@@ -23,8 +23,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Wordpress Localhost Administration
-    </title>
+    <title>WP Shepherd</title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -32,9 +31,9 @@
     <link rel="stylesheet" href="css/wpadmin.css" />
         
 <script>
-$(function() {
-$( "#tabs" ).tabs();
-});
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
 </script>
   </head>
   <body>
@@ -82,7 +81,7 @@ $( "#tabs" ).tabs();
           echo '1. Make sure browser pop-ups are enabled for "' . $lh_port . '"<br/>';   
           echo '2. A one time set-up is required (honest guv): Go to Admin tab and click on Installation Settings. The port you are using, ' . $lh_port . ' is auto completed, complete the other two fields<br/>';
           echo '3. Remember the user name and password used here is <b>NOT</b> secure, so keep that in mind during this set-up<br/>';                           
-          echo '4. With the Admin done it\'s time to play To install a fresh copy of Wordpress click the "Websites" tab click "Develop", then follow the onscreen instructions<br/>'; 
+          echo '4. With the Admin bit done it\'s time to play. To install a fresh copy of Wordpress click the "Websites" tab click "Develop", then follow the onscreen instructions<br/>'; 
           echo '5. To install a fresh copy of Wordpress click the "Websites" tab click "Develop", then follow the onscreen instructions<br/>'; 
           echo 'If you have any feedback or comments please use the form in the "Contacts" page<br/>';                          
 ?>        
@@ -132,19 +131,27 @@ $( "#tabs" ).tabs();
         <div class="menu_div"  id="left-box">
         </div>
         <div id="content_4">
-        <p>How to get in touch for requests, bugs and comments</p>        
+        
+    	<div id="sitename">     
+        
+        
+        <h3>How to get in touch for requests, bugs and comments</h3>
+        
+			<p>Email <a href="mailto:bncoders@yahoo.co.uk?Subject=Hello%20again" target="_top">BNCoders</p>			
+		
+		</div>               
         </div>                                                  
       </div>
       <div id="tabs-5">
         <div id="left-box">        
-        <div id="content_5">
-        <p>Create plugin</p>
-        <p>Create thumbnail of local website</p>        
-        <p>Create the folowing folder in a wordpress installation</p>
-        <p>Path: wp-content/plugins/</p>
-        <p>Create a customised folder to hold the php</p>
-        <p>http://net.tutsplus.com/tutorials/wordpress/creating-a-custom-wordpress-plugin-from-scratch/</p>                                
-        </div>                                 
+        	<div id="content_5">
+        		<p>Create plugin</p>
+        		<p>Create thumbnail of local website</p>        
+        		<p>Create the folowing folder in a Wordpress installation</p>
+        		<p>Path: wp-content/plugins/</p>
+        		<p>Create a customised folder to hold the php</p>
+        		<p>http://net.tutsplus.com/tutorials/wordpress/creating-a-custom-wordpress-plugin-from-scratch/</p>                                
+          </div>                                 
         </div>                 
       </div> 
       <div id="tabs-6">
@@ -166,7 +173,7 @@ $( "#tabs" ).tabs();
       <div id="tabs-7">
         <div class="menu_div"  id="left-box">
         <div id="content_7">
-        <p>All about the BNCoders</p>
+        <h3>All about the BNCoders</h3>
         <p>Formed in 2013</p>        
         </div>                                 
         </div>                 

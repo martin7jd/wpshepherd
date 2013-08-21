@@ -14,13 +14,15 @@
   # If not direct the user to the "Admin" tab and the "Installation settings" link
 
 
-  # When the "Submit" button is press it launches install_one.php
+	echo '<div id="sitename">';  # When the "Submit" button is press it launches install_one.php
 
-  # When the "Submit" button is press it launches install_one.php
+	echo '<h3>Web Site Name<h3/>';
 
-	echo 'Web Site Name: <input id="web" type="text" name="web"><br>';
+	echo '<input id="web" type="text" name="web" placeholder="Type Name Here" required><br/><br/>';
 
 
 	echo '<button type="button" onclick="inst_one()">Fresh Install!</button>';
+
+	echo '</div>';
 
 ?>

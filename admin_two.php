@@ -34,20 +34,31 @@
   # Write the verbage  
     fwrite($fh, $stringData);
     
+    $stringData = "\techo '<div id=\"sitename\">';";
+    
+    fwrite($fh, $stringData);    
+    
     $stringData = "  # When the \"Submit\" button is press it launches install_one.php\n\n";
     
     fwrite($fh, $stringData);
+    
+    $stringData = "\techo '<h3>Web Site Name<h3/>';\n\n";    
         
     fwrite($fh, $stringData);
     
-    $stringData = "\techo 'Web Site Name: <input id=\"web\" type=\"text\" name=\"web\"><br>';\n\n\n";
+    $stringData = "\techo '<input id=\"web\" type=\"text\" name=\"web\" placeholder=\"Type Name Here\" required><br/><br/>';\n\n\n";
     
     fwrite($fh, $stringData);
     
-    $stringData = "\techo '<button type=\"button\" onclick=\"inst_one()\">Fresh Install!</button>';";
+    $stringData = "\techo '<button type=\"button\" onclick=\"inst_one()\">Fresh Install!</button>';\n\n";
     
     fwrite($fh, $stringData);                           
         
+    $stringData = "\techo '</div>';";
+    
+    fwrite($fh, $stringData);    
+    
+    
     $grtThan = '>';
 
     $stringData = "\n\n?$grtThan";

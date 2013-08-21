@@ -7,14 +7,14 @@ body {
   border-style:solid;
   border-width:1px;
   width:215px;
-  height:300px; 
+  height:350px; 
 }
 
 #content_1, #content_2, #content_3,  #content_4,  #content_5,  #content_6,  #content_7 {
   border-style:solid;
   border-width:1px;
   width:685px;
-  height:300px;
+  height:350px;
   position:absolute;
   left:245px;
   top:69px;
@@ -40,8 +40,7 @@ IMG.displayed {
   border-width:1px;
 }
 
-.menu_div ul
-{
+.menu_div ul{
     padding:0px;
     margin:0px;
     font-family:Arial, Helvetica, sans-serif;
@@ -50,24 +49,34 @@ IMG.displayed {
     list-style:none;
     text-indent:15px;
 }
-.menu_div ul li
-{
-    /*background:#3f3f3f;*/
+
+.menu_div ul li{
     background:#B5B5B5;    
     line-height:28px;
     border-bottom:1px solid #333;
 }
-.menu_div ul li a
-{
+
+.menu_div ul li a{
     text-decoration:none;
     color:#FFF;
     display:block;
 }
-.menu_div ul li a:hover
-{
+
+.menu_div ul li a:hover{
+	background:#c0c0c0;    
+}
+
+.menu_div ul li#active{
     background:#d40203;
 }
-.menu_div ul li#active
-{
-    background:#d40203;
+
+#sitename{
+  /* position:absolute;
+  left:245px;
+  top:69px;
+  font-size:80%; */
+}
+
+#greenTick{
+color:#009933;
 }

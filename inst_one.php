@@ -14,7 +14,8 @@
     require_once('./common/con_localhost.php');
     
     $link = local_db_connect();
-  
+
+   	$lh_port = $_SERVER["HTTP_HOST"];    
  
   # Global information
     $web = $_POST['web'];   
@@ -32,22 +33,28 @@
         unlink('progress.txt');           
     }
       
-  # make foo the current db
+  # Make foo the current db
     $db_selected = mysqli_select_db($link, $web);
-    if ($db_selected) {    
+    
+    echo '<div id="sitename">';
+    
+    if ($db_selected) {
+    
+      echo '<h3>Warning</h3>';    
       echo 'A database with that name already exists<br/>';
-      echo 'By clicking on Continue it will delete the existing installation and do you a fresh install<br/>';    
+      echo 'By clicking on Continue it will delete the existing installation<br/>and do you a fresh install<br/>';    
     } else  {
     
-      echo 'There are no current websites found with the name ' . $web;
+      echo '<h3>Congratulations</h3>';          
+      echo 'There are no Wordpress websites on ' . $lh_port . ' with the name<br/><h3>"' . $web . '"</h3>';
     
     } 
-
-   $lh_port = $_SERVER["HTTP_HOST"];  
 
   # Confirmation that they wish to proceed and overwrite the folder and database    
     echo '<br/><button type="button" onclick="inst_confirm();inst_cont(\'' . $web . '\', \'' . $lh_port . '\')">Continue?</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="inst_deny()">Cancel!</button>';    
  
+  	echo '</div>';
+  
   # Close db connection
     mysqli_close($link);  
 
