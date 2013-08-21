@@ -37,13 +37,13 @@
 </script>
   </head>
   <body>
-		<table width="100%">
-			<tr>
-				<td style="background-color:lightgrey">
-					<IMG class="displayed" src="./images/logo.png" alt="WPShepherd" >
-				</td>
-			</tr>
-		</table>			  
+	<table width="100%">
+		<tr>
+			<td style="background-color:lightgrey">
+				<IMG class="displayed" src="./images/logo.png" alt="WP Shepherd" >
+			</td>
+		</tr>
+	</table>			  
     <div id="tabs">
       <ul>
         <li>
@@ -59,14 +59,8 @@
           <a href="#tabs-4">Contact</a>
         </li>
         <li>
-          <a href="#tabs-5">Plugins</a>
+          <a href="#tabs-5">About</a>
         </li>
-        <li>
-          <a href="#tabs-6">Git</a>
-        </li> 
-        <li>
-          <a href="#tabs-7">About</a>
-        </li>                                                       
       </ul>
       <div id="tabs-1">
         <div id="left-box">                
@@ -143,34 +137,6 @@
         </div>                                                  
       </div>
       <div id="tabs-5">
-        <div id="left-box">        
-        	<div id="content_5">
-        		<p>Create plugin</p>
-        		<p>Create thumbnail of local website</p>        
-        		<p>Create the folowing folder in a Wordpress installation</p>
-        		<p>Path: wp-content/plugins/</p>
-        		<p>Create a customised folder to hold the php</p>
-        		<p>http://net.tutsplus.com/tutorials/wordpress/creating-a-custom-wordpress-plugin-from-scratch/</p>                                
-          </div>                                 
-        </div>                 
-      </div> 
-      <div id="tabs-6">
-        <div class="menu_div"  id="left-box">
-          <ul>
-           <li>
-              <a href="#" id="git_down" onclick="page(this.id)">Download Git<div id="g_d"></div></a><!--index_admin_set.php-->              
-            </li> 
-            <li>
-              <a href="#" id="git_inst" onclick="page(this.id)">Install Git<div id="g_i"></div></a><!--index_admin_res.php-->              
-            </li>                         
-          </ul>                
-        </div> 
-        <div id="content_6">       
-          <p>Can we do something with git here</p>
-          <p>Install, create repo, sync</p>        
-        </div>                                                 
-      </div>            
-      <div id="tabs-7">
         <div class="menu_div"  id="left-box">
         <div id="content_7">
         <h3>All about the BNCoders</h3>

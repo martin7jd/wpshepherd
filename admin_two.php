@@ -6,7 +6,9 @@
     $pass = $_POST['pass'];
 
     $host = 'localhost';
-
+    
+    echo '<h3>DB Table</h3>';
+    
   # Path to php file
     $myFile = "temp_index_inst.php";
 
@@ -218,9 +220,12 @@
     $sql = "CREATE TABLE $db_name.localhost_info(id INT NOT NULL DEFAULT '1', admin_host VARCHAR(30),admin_user VARCHAR(30),admin_password VARCHAR(30),PRIMARY KEY (id))";
 
   # Execute query
-    if (mysqli_query($con,$sql))  {
+    if (mysqli_query($con,$sql))  {        
         echo "Table localhost_info created successfully<br/>";
     } else {
+    
+    	echo '<h3>DB Information</h3>';
+    
         echo "" . mysqli_error($con) . ' Table localhost_info not created';
     }
 
@@ -237,8 +242,14 @@
       $sql = 'INSERT INTO ' . $db_name . '.localhost_info (admin_host, admin_user, admin_password)VALUES (\'' . $host . '\', \'' . $user . '\',\'' . $pass . '\')';
 
       if (mysqli_query($con,$sql))  {
+      
+      	  echo '<h3>Congratulations</h3>';
+      
           echo "localhost_info credentials entered successfully<br/>";
       } else {
+          
+          echo '<h3>Warning</h3>';
+          
           echo "" . mysqli_error($con) . ' Credentials not entered';
     
           unlink('./common/con_localhost.php');
@@ -258,7 +269,7 @@
     $stringData = $tag . "function local_db_connect(){" . $newlineonly;
     fwrite($fh, $stringData);
 
-		$stringData = $tag . $tag . '$link = mysqli_connect(\'' . $host . '\', \'' . $user . '\',\'' . $pass . '\');' . $newlineonly;
+	$stringData = $tag . $tag . '$link = mysqli_connect(\'' . $host . '\', \'' . $user . '\',\'' . $pass . '\');' . $newlineonly;
     fwrite($fh, $stringData);
     
     $stringData = $tag . $tag . $tag . 'if (!$link) {' . $newlineonly;
@@ -270,19 +281,19 @@
     $stringData = $tag . $tag . '}' . $newlineonly;    
     fwrite($fh, $stringData);    
             
-		$stringData = $tag . $tag . '$db_selected = mysqli_select_db($link, \'wpadmin_localhost\');' . $newlineonly;    
+	$stringData = $tag . $tag . '$db_selected = mysqli_select_db($link, \'wpadmin_localhost\');' . $newlineonly;    
     fwrite($fh, $stringData);
     
-		$stringData = $tag . $tag . $tag . 'if (!$db_selected) {' . $newlineonly;    
+	$stringData = $tag . $tag . $tag . 'if (!$db_selected) {' . $newlineonly;    
     fwrite($fh, $stringData);
     
-		$stringData = $tag . $tag . $tag . $tag . 'die (\'Cannot use foo : \' . mysqli_error());' . $newlineonly;    
+	$stringData = $tag . $tag . $tag . $tag . 'die (\'Cannot use foo : \' . mysqli_error());' . $newlineonly;    
     fwrite($fh, $stringData);    
     
     $stringData = $tag . $tag . '}' . $newlineonly;    
     fwrite($fh, $stringData);    
 
-		$stringData = $tag . 'return ($link);' . $newlineonly;
+	$stringData = $tag . 'return ($link);' . $newlineonly;
     fwrite($fh, $stringData);
     
     $stringData = $tag . $tag . '}' . $newlineonly;    

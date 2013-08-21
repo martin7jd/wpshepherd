@@ -43,7 +43,7 @@
           
     	  echo '<div id="sitename">';     
 
-		  echo '<h3>Warning</h3>';
+		  echo '<h3>Confirmation</h3>';
           
           echo 'Table deleted successfully<br/>';            
         
@@ -52,13 +52,13 @@
           echo '</div>';     
       
         if(file_exists('./common/con_localhost.php')){
-            echo './common/con_localhost.php Found';
+            echo './common/con_localhost.php Found and deleted';
          
             unlink('./common/con_localhost.php');
                    
         } else  {
         
-          echo './common/con_localhost.php Not found';
+          echo './common/con_localhost.php Not found and not deleted';
         }      
       }      
     

@@ -19,11 +19,12 @@
       echo 'MySql <input id="host" disabled="disabled" type="text" name="host" value="'  . $lh_port . '"><br/>';
       
       if($lh_port == 'localhost:8888'){
-      	echo 'MySql <input id="user" type="text" name="user" placeholder="MAPP User=root" required><br/>';
-      	echo 'MySql <input id="pass" type="text" name="pass" placeholder="MAMP Password=root" required><br/><br/>';            
+      /* autofocus does not work in FF*/
+      	echo 'MySql <input id="user" type="text" name="user" placeholder="MAPP User=root" required autofocus/><br/>';
+      	echo 'MySql <input id="pass" type="text" name="pass" placeholder="MAMP Password=root" required/><br/><br/>';            
       }	else	{
-      	echo 'MySql <input id="user" type="text" name="user" placeholder="User Name" required><br/>';
-      	echo 'MySql <input id="pass" type="text" name="pass" placeholder="Password" required><br/><br/>';     
+      	echo 'MySql <input id="user" type="text" name="user" placeholder="MySql User Name" required/><br/>';
+      	echo 'MySql <input id="pass" type="text" name="pass" placeholder="MySql Password" required/><br/><br/>';     
       }
       
       echo '<button type="button" onclick="admin_one()">Add Data!</button>';  
