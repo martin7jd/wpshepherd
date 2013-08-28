@@ -1,5 +1,10 @@
 <?php
 
+   	//$localServer = $_SERVER["DOCUMENT_ROOT"]; 
+   	
+   	//echo $localServer;  
+	
+
 	echo '<h3>Using XAMPP</h3>';
 	echo 'When installing XAMPP you set the following:<br/>';  
 	echo 'Username: Set when installed<br/>';

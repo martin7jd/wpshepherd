@@ -246,11 +246,16 @@
       	  echo '<h3>Congratulations</h3>';
       
           echo "localhost_info credentials entered successfully<br/>";
+          
+      	  echo '<h3>Install Wordpress</h3>';          
+          
+          echo 'To install a fresh copy of Wordpress click the "Websites" tab and click "New Set-up<br/>and follow the onscreen instructions"';
+
       } else {
           
           echo '<h3>Warning</h3>';
           
-          echo "" . mysqli_error($con) . ' Credentials not entered';
+          echo "" . mysqli_error($con) . ' Credentials not entered<br/>';
     
           unlink('./common/con_localhost.php');
     
